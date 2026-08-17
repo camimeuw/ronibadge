@@ -205,8 +205,8 @@ body {
 
 /* --- VENTANA BLOC DE NOTAS --- */
 .ventana-nota {
-    width: 28%;
-    max-width: 280px;
+    width: 22%;
+    max-width: 210px;
     background-color: #ece9d8;
     border: 3px solid #0055ea;
     border-radius: 4px 4px 0 0;
@@ -268,8 +268,8 @@ body {
     bottom: -1px;
     left: 50%;
     transform: translateX(-50%);
-    width: 32%;
-    max-width: 320px;
+    width: 47%;
+    max-width: 440px;
     z-index: 20;
 }
 
@@ -320,7 +320,7 @@ body {
 
 /* --- VENTANAS EXTRA QUE LLENAN LOS HUECOS VACÍOS --- */
 .ventana-favoritos {
-    width: 180px;
+    width: 170px;
     background-color: #ece9d8;
     border: 3px solid #0055ea;
     border-radius: 4px 4px 0 0;
@@ -361,10 +361,9 @@ body {
     z-index: 4;
 }
 
-/* --- VENTANA NUEVO MENSAJE (debajo del ENTER, hacia la izquierda) --- */
+/* --- VENTANA NUEVO MENSAJE --- */
 .ventana-mensaje {
-    width: 22.3%;
-    max-width: 210px;
+    width: 150px;
     background-color: #ece9d8;
     border: 3px solid #0055ea;
     border-radius: 4px 4px 0 0;
@@ -372,8 +371,8 @@ body {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 460px;
-    left: 34%;
+    top: 650px;
+    right: 20px;
     z-index: 6;
 }
 
@@ -428,13 +427,13 @@ body {
     }
 
     .gatito-asomando {
-        top: 820px;
+        top: 800px;
         bottom: auto;
-        width: 260px;
+        width: 300px;
     }
 
     .ventana-nota {
-        top: 1060px;
+        top: 1080px;
         bottom: auto;
         left: 20px;
         width: 260px;
