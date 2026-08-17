@@ -162,17 +162,17 @@ body {
 
 /* --- VENTANA DE ALERTA --- */
 .ventana-alerta {
-    width: 200px; 
-    background-color: #ece9d8; 
-    border: 3px solid #0055ea; 
+    width: 200px;
+    background-color: #ece9d8;
+    border: 3px solid #0055ea;
     border-radius: 4px 4px 0 0;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 70px; 
-    left: 160px; 
-    z-index: 4; 
+    top: 20px;
+    left: 260px;
+    z-index: 4;
 }
 
 .contenido-alerta {
@@ -205,9 +205,10 @@ body {
 
 /* --- VENTANA BLOC DE NOTAS --- */
 .ventana-nota {
-    width: 280px; 
-    background-color: #ece9d8; 
-    border: 3px solid #0055ea; 
+    width: 28%;
+    max-width: 280px;
+    background-color: #ece9d8;
+    border: 3px solid #0055ea;
     border-radius: 4px 4px 0 0;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
     display: flex;
@@ -266,33 +267,34 @@ body {
     position: absolute;
     bottom: -1px;
     left: 50%;
-    transform: translateX(-50%); 
-    width: 320px; 
+    transform: translateX(-50%);
+    width: 32%;
+    max-width: 320px;
     z-index: 20;
 }
 
  .imagen-alerta {
     position: absolute;
-    bottom: 50px;
-    left: calc(50% + 100px);
-    width: 120px;
+    top: 400px;
+    left: calc(50% + 200px);
+    width: 100px;
     z-index: 15;
 }
  .imagen-basura {
     position: absolute;
-    top: 7px;
-    right: 10px;
-    width: 60px;
+    top: 130px;
+    right: 25px;
+    width: 55px;
     z-index: 10;
 }
 
 .imagen-signo {
     position: absolute;
-    top: 37%;
-    left: calc(50% + 80px);
-    width: 100px;
+    top: 140px;
+    left: calc(50% + 190px);
+    width: 90px;
     z-index: 10;
-} 
+}
 .ventana-error {
     width: 160px;
     background-color: #ece9d8;
@@ -306,19 +308,89 @@ body {
 }
 
 .error-1 {
-    top: 15px;
-    right: 15px;
+    top: 20px;
+    right: 20px;
 }
 
 .error-2 {
-    top: 50%;
-    left: calc(50% + 60px);
+    top: 280px;
+    left: calc(50% + 170px);
+    width: 150px;
+}
+
+/* --- VENTANA NUEVO MENSAJE (debajo del ENTER, hacia la izquierda) --- */
+.ventana-mensaje {
+    width: 22.3%;
+    max-width: 210px;
+    background-color: #ece9d8;
+    border: 3px solid #0055ea;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 460px;
+    left: 34%;
+    z-index: 6;
 }
 
 @keyframes latido {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
     100% { transform: scale(1); }
+}
+
+/* --- PANTALLAS CHICAS: las ventanas "de relleno" (Error, Warning, iconos
+   decorativos) existen para ocupar el espacio extra del escritorio ancho;
+   en mobile no sobra espacio, así que se ocultan y el resto se apila en
+   una sola columna para que no se pisen entre sí --- */
+@media (max-width: 700px) {
+    .ventana-error,
+    .imagen-basura,
+    .imagen-signo,
+    .imagen-alerta {
+        display: none;
+    }
+
+    .area-contenido {
+        min-height: 1300px;
+    }
+
+    .mini-ventana {
+        top: 20px;
+        left: 20px;
+    }
+
+    .ventana-alerta {
+        top: 410px;
+        left: 20px;
+        width: 190px;
+    }
+
+    .contenedor-enter {
+        top: 560px;
+        bottom: auto;
+        transform: translateX(-50%);
+    }
+
+    .ventana-mensaje {
+        top: 660px;
+        left: 20px;
+        width: 190px;
+    }
+
+    .gatito-asomando {
+        top: 820px;
+        bottom: auto;
+        width: 260px;
+    }
+
+    .ventana-nota {
+        top: 1060px;
+        bottom: auto;
+        left: 20px;
+        width: 260px;
+    }
 }
 
 
