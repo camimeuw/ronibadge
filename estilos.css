@@ -17,7 +17,19 @@ body {
     align-items: center;
     box-sizing: border-box;
     font-family: 'PixelFont', 'Tahoma', sans-serif;
-    cursor: url('assets/img/cursor.png'), auto; 
+    cursor: url('assets/img/cursor.png'), auto;
+}
+
+/* --- TRANSICIÓN FLUIDA ENTRE PÁGINAS --- */
+body {
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+body.fade-in {
+    opacity: 1;
+}
+body.fade-out {
+    opacity: 0;
 }
 
 /* 2. EL RECTÁNGULO PRINCIPAL */
@@ -312,7 +324,7 @@ body {
 
 .error-2 {
     top: 50%;
-    left: calc(50% - 100px);
+    left: calc(50% - 150px);
 }
 
 @keyframes latido {

@@ -1,4 +1,16 @@
- // ---- MENÚ HAMBURGUESA ----
+ // ---- TRANSICIÓN FLUIDA ENTRE PÁGINAS ----
+document.body.classList.add('fade-in');
+document.querySelectorAll('a.boton-enter').forEach(link => {
+    link.addEventListener('click', (e) => {
+        const destino = link.getAttribute('href');
+        if (!destino || link.target === '_blank') return;
+        e.preventDefault();
+        document.body.classList.add('fade-out');
+        setTimeout(() => { window.location.href = destino; }, 350);
+    });
+});
+
+// ---- MENÚ HAMBURGUESA ----
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 if (navToggle && navLinks) {
