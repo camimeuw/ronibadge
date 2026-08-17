@@ -6,8 +6,16 @@ document.querySelectorAll('a.boton-enter').forEach(link => {
         if (!destino || link.target === '_blank') return;
         e.preventDefault();
         document.body.classList.add('fade-out');
-        setTimeout(() => { window.location.href = destino; }, 350);
+        setTimeout(() => { window.location.href = destino; }, 900);
     });
+});
+
+// Si la página vuelve a mostrarse (botón "atrás" del navegador, que en
+// muchos casos la restaura desde el bfcache tal cual quedó, a mitad del
+// fade-out) se resetea el estado para que no quede pegada invisible.
+window.addEventListener('pageshow', () => {
+    document.body.classList.remove('fade-out');
+    document.body.classList.add('fade-in');
 });
 
 // ---- MENÚ HAMBURGUESA ----
