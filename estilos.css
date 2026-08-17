@@ -572,7 +572,7 @@ body.fade-out {
 .product-card__name { font-family: 'PixelFont', 'Tahoma', sans-serif; font-size: 15px; color: #0055ea; margin: 4px 0 0; }
 .product-card__price { font-size: 13px; color: #1c45a8; margin: 0; }
 .product-card__badge {
-    position: absolute; top: 6px; right: 6px;
+    position: absolute; top: 6px; right: 6px; z-index: 2;
     background: #0055ea; color: #fff;
     font-family: 'PixelFont', 'Tahoma', sans-serif; font-size: 10px;
     padding: 3px 8px; border-radius: 10px;
@@ -647,7 +647,7 @@ body.fade-out {
 .badge-nuevo { background: #0055ea; }
 .badge-destacado { background: #b19cd9; }
 
-.producto-modal__img { width: 100%; max-height: 160px; object-fit: contain; }
+.producto-modal__img { width: 100%; max-height: 320px; object-fit: contain; }
 .producto-modal__nombre {
     font-family: 'PixelFont', 'Tahoma', sans-serif; font-size: 14px; color: #0055ea; margin: 6px 0 2px;
 }
