@@ -1,0 +1,208 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - ronibadge</title>
+    <link rel="stylesheet" href="estilos.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    
+</head>
+<body class="tienda">
+
+ <nav class="navbar" id="inicio">
+    <div class="navbar__logo">
+        <svg class="navbar__logo-svg" viewBox="0 0 300 70" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="dots" width="12" height="12" patternUnits="userSpaceOnUse">
+                    <rect width="12" height="12" fill="#ffffff"/>
+                    <circle cx="6" cy="6" r="2.5" fill="#fff"/>
+                </pattern>
+            </defs>
+            <text x="2" y="26" class="logo-svg-text-chica" fill="white">Bienvenidos a</text>
+            <text x="2" y="60" class="logo-svg-text" fill="white">Ronibadge</text>
+        </svg>
+            <img src="assets/img/gato.png" alt="Gato" class="navbar__gato">
+        
+    </div>
+     <div class="navbar__iconos">
+    <button class="navbar__cart" id="cartToggle" aria-label="Ver carrito">
+        <svg class="carrito-icono" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" fill="white"/>
+        </svg>
+        <span class="carrito-contador" id="cartCount">0</span>
+    </button>
+</div>
+
+</nav>
+<div class="marquee-bar">
+    <div class="marquee-bar__contenido">
+          <span>☆ Envíos a todo Chile ☆ Compras superior a 3.000 ☆ Diseñamos tus ideas :3 ☆ 100% Roni c: </span>
+        <span>☆ Envíos a todo Chile ☆ Compras superior a 3.000 ☆ Diseñamos tus ideas :3 ☆ 100% Roni c: </span>
+    </div>
+</div>
+<img src="assets/img/logo1.png" alt="Logo" class="decoracion-lateral">
+ <img src="assets/img/logo1.png" alt="Logo" class="decoracion-lateral decoracion-lateral--derecha">
+
+
+    <main class="tienda-contenido">
+  <section id="info" class="seccion-info">
+    <div class="win98-window">
+        <div class="win98-titlebar">
+            <div class="win98-titlebar__left">
+                <span class="win98-titlebar__icon">✦</span>
+                <span class="win98-titlebar__text">Inicio</span>
+            </div>
+            <div class="win98-titlebar__buttons">
+                <span class="win98-btn">_</span>
+                <span class="win98-btn">□</span>
+                <span class="win98-btn">×</span>
+            </div>
+        </div>
+        <div class="win98-menubar">
+            <span>Archivo</span>
+            <span>Ver</span>
+            <span>Ayuda</span>
+        </div>
+        <div class="win98-body">
+            <div class="tabs__nav">
+                <button class="tab-btn" data-tab="nosotros">Nosotros</button>
+                <button class="tab-btn" data-tab="envios">Envíos</button>
+                <button class="tab-btn" data-tab="contacto">Contacto</button>
+            </div>
+            <div class="tabs__panel">
+                <div class="tab-content" data-tab="nosotros">
+                    <div class="tab-content__inner">
+                        <p>Roni nació de una mezcla de nostalgia, creatividad y ese sentimiento bonito de encontrar algo que simplemente te representa. Entre stickers, chapitas, llaveros, photocards y pequeños objetos coleccionables, nació este espacio para convertir personajes, series, recuerdos y gustos en cosas que puedas llevar contigo :3.</p>
+                        <p>Pero Roni no es solo una tienda. Es un pequeño universo habitado por Roni, nuestro gatito alienígena, que llegó desde algún rincón perdido entre los años 2000, los CD's, los reproductores MP3, los auriculares con cable y revistas llenas de colores.</p>
+                        <p>Nuestra estética mezcla lo retro y lo actual, inspirándose en la moda japonesa, la cultura pop, la tecnología 2000 y esa sensación de abrir una revista antigua y encontrar algo que te hacía querer decorar absolutamente todo.</p>
+                        <p>Nos vemos en algún lugar entre los píxeles, los stickers y las estrellas :3.<br>-Roni &lt;3</p>
+                    </div>
+                </div>
+                <div class="tab-content" data-tab="envios">
+                    <div class="tab-content__inner">
+                        <p>Envíos a todo Chile mediante Starken y Bluexpress. Envío a pagar por el comprador. Compras mínimas de $3.000.</p>
+                    </div>
+                </div>
+ <div class="tab-content" data-tab="contacto">
+    <div class="tab-content__inner">
+        <div class="contacto-iconos">
+            <a href="https://instagram.com/ronibadge_" target="_blank" class="icono-contacto" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zm-5 3.5c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 2c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm5.25-3.25a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z" fill="#0055ea"/>
+                </svg>
+            </a>
+            <a href="https://wa.me/56983525016" target="_blank" class="icono-contacto" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.07-1.38C8.55 21.5 10.24 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 2c4.41 0 8 3.59 8 8s-3.59 8-8 8c-1.5 0-2.9-.42-4.1-1.14l-.29-.17-3.05.82.82-3.03-.19-.31C4.42 14.85 4 13.46 4 12c0-4.41 3.59-8 8-8zm-3.4 4.3c-.15 0-.4.06-.6.28-.21.22-.8.78-.8 1.9s.82 2.2 .94 2.36c.11.15 1.6 2.5 3.9 3.4 1.9.75 2.3.6 2.7.56.4-.04 1.3-.53 1.48-1.04.18-.51.18-.95.13-1.04-.05-.09-.19-.15-.4-.26-.21-.11-1.3-.64-1.5-.72-.2-.07-.35-.11-.5.11-.15.22-.57.72-.7.87-.13.15-.26.16-.47.05-.21-.11-.9-.33-1.71-1.06-.63-.56-1.06-1.26-1.18-1.47-.13-.22-.01-.34.1-.45.1-.1.21-.26.32-.39.1-.13.14-.22.21-.37.07-.15.03-.28-.02-.39-.05-.11-.5-1.2-.68-1.64-.18-.44-.36-.38-.5-.38h-.43z" fill="#0055ea"/>
+                </svg>
+            </a>
+            <a href="mailto:roni.badge.26@gmail.com" class="icono-contacto" aria-label="Correo">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 4h20v16H2V4zm2 2v.01L12 12l8-5.99V6H4zm16 2.24l-7.4 5.55a1 1 0 01-1.2 0L4 8.24V18h16V8.24z" fill="#0055ea"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</section>
+ <section id="destacados" class="seccion-destacados">
+    <div class="win98-window">
+        <div class="win98-titlebar">
+            <div class="win98-titlebar__left">
+                <span class="win98-titlebar__icon">▶</span>
+                <span class="win98-titlebar__text">Destacados</span>
+            </div>
+            <div class="win98-titlebar__buttons">
+                <span class="win98-btn">_</span>
+                <span class="win98-btn">□</span>
+                <span class="win98-btn">×</span>
+            </div>
+        </div>
+        <div class="win98-menubar">
+            <span>File</span>
+            <span>View</span>
+            <span>Play</span>
+            <span>Tools</span>
+            <span>Help</span>
+        </div>
+        <div class="wmp-screen" id="destacadoScreen">
+            <p class="wmp-screen__vacio">Cargando...</p>
+        </div>
+        <div class="wmp-progress">
+            <div class="wmp-progress__fill" id="destacadoProgress"></div>
+        </div>
+        <div class="wmp-controls">
+            <button type="button" class="wmp-btn" id="destacadoPrev" aria-label="Anterior">◀◀</button>
+            <button type="button" class="wmp-btn wmp-btn--play" id="destacadoPlayPause" aria-label="Pausar">❚❚</button>
+            <button type="button" class="wmp-btn" id="destacadoNext" aria-label="Siguiente">▶▶</button>
+        </div>
+    </div>
+</section>
+<section id="catalogo" class="seccion-catalogo">
+    <div class="win98-window">
+        <div class="win98-titlebar">
+            <div class="win98-titlebar__left">
+                <span class="win98-titlebar__icon">✦</span>
+                <span class="win98-titlebar__text">Catálogo</span>
+            </div>
+            <div class="win98-titlebar__buttons">
+                <span class="win98-btn">_</span>
+                <span class="win98-btn">□</span>
+                <span class="win98-btn">×</span>
+            </div>
+        </div>
+        <div class="win98-menubar">
+            <span>Archivo</span>
+            <span>Ver</span>
+            <span>Ayuda</span>
+        </div>
+        <div class="win98-body">
+            <div class="tabs__nav" id="catalogoTabsNav"></div>
+            <div class="tabs__panel" id="catalogoTabsPanel"></div>
+        </div>
+    </div>
+</section>
+      
+
+
+
+    </main>
+ <div class="producto-overlay" id="productoOverlay"></div>
+<div class="producto-modal" id="productoModal">
+    <button class="producto-modal__cerrar" id="productoModalClose">×</button>
+    <div class="producto-modal__badges" id="productoModalBadges"></div>
+    <img src="" alt="" class="producto-modal__img" id="productoModalImg">
+    <h3 class="producto-modal__nombre" id="productoModalNombre"></h3>
+    <p class="producto-modal__descripcion" id="productoModalDescripcion"></p>
+    <div class="producto-modal__opciones" id="productoModalVariantes"></div>
+    <div class="producto-modal__opciones" id="productoModalOpciones"></div>
+    <label class="producto-modal__personalizar" id="productoModalPersonalizar" style="display:none;">
+    <input type="checkbox" id="personalizarCheck">
+    <span id="personalizarTexto"></span>
+</label>
+<div class="producto-modal__opciones" id="productoModalPersonalizarOpciones" style="display:none;"></div>
+    <p class="producto-modal__stock" id="productoModalStock"></p>
+    <p class="producto-modal__precio-final">Total: <span id="productoModalPrecioFinal">$0</span></p>
+    <button class="nav-btn producto-modal__agregar" id="productoModalAgregar">Agregar al carrito</button>
+</div>
+ <div class="carrito-overlay" id="cartOverlay"></div>
+<aside class="carrito-panel" id="cartPanel">
+    <div class="carrito-panel__header">
+        <span>Tu carrito</span>
+        <button class="carrito-cerrar" id="cartClose">×</button>
+    </div>
+    <div class="carrito-panel__items" id="cartItems">
+        <p class="carrito-vacio">Tu carrito está vacío.</p>
+    </div>
+    <div class="carrito-panel__footer">
+        <p class="carrito-total">Total: <span id="cartTotal">$0</span></p>
+        <a href="#" id="cartCheckout" class="nav-btn carrito-checkout" target="_blank">Finalizar pedido por WhatsApp</a>
+    </div>
+</aside>
+    <script src="codigo.js"></script>
+</body>
+</html>
