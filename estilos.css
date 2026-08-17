@@ -268,8 +268,8 @@ body {
     bottom: -1px;
     left: 50%;
     transform: translateX(-50%);
-    width: 47%;
-    max-width: 440px;
+    width: 40%;
+    max-width: 400px;
     z-index: 20;
 }
 
@@ -328,7 +328,21 @@ body {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 440px;
+    top: 495px;
+    left: 20px;
+    z-index: 4;
+}
+
+.ventana-sugerencia {
+    width: 170px;
+    background-color: #ece9d8;
+    border: 3px solid #0055ea;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 395px;
     left: 20px;
     z-index: 4;
 }
@@ -395,7 +409,8 @@ body {
     .imagen-alerta,
     .ventana-favoritos,
     .ventana-radio,
-    .ventana-notificacion {
+    .ventana-notificacion,
+    .ventana-sugerencia {
         display: none;
     }
 
