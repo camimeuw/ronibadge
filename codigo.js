@@ -133,6 +133,12 @@ function capitalizar(texto) {
     return texto.charAt(0).toUpperCase() + texto.slice(1);
 }
 
+function rutaImagen(nombre) {
+    if (!nombre) return '';
+    if (/^https?:\/\//i.test(nombre.trim())) return nombre.trim();
+    return 'assets/img/' + nombre.trim();
+}
+
 function precioTexto(p) {
     const precios = [p.variante1_precio, p.variante2_precio, p.variante3_precio].filter(v => v);
     if (precios.length > 1) return "Desde $" + parseInt(precios[0]).toLocaleString('es-CL');
@@ -144,7 +150,7 @@ function tarjetaHTML(p) {
     return `
         <div class="product-card">
             ${p.nuevo === 'SI' ? '<span class="product-card__badge">Nuevo</span>' : ''}
-            <img src="assets/img/${p.imagen}" alt="${p.nombre}" class="product-card__img">
+            <img src="${rutaImagen(p.imagen)}" alt="${p.nombre}" class="product-card__img">
             <h3 class="product-card__name">${p.nombre}</h3>
             <p class="product-card__price">${precioTexto(p)}</p>
             <button type="button" class="nav-btn product-card__btn ver-detalle-btn" ${sinStock ? 'disabled' : ''}>${sinStock ? 'Agotado' : 'Ver más'}</button>
@@ -200,7 +206,7 @@ let productoActual = null;
 
 function abrirDetalleProducto(producto) {
     productoActual = producto;
-    document.getElementById('productoModalImg').src = 'assets/img/' + producto.imagen;
+    document.getElementById('productoModalImg').src = rutaImagen(producto.imagen);
     document.getElementById('productoModalImg').alt = producto.nombre;
     document.getElementById('productoModalNombre').textContent = producto.nombre;
     document.getElementById('productoModalDescripcion').textContent = producto.descripcion;
@@ -347,7 +353,7 @@ function mostrarDestacado(i) {
     }
     const p = destacadosList[i];
     screen.innerHTML = `
-        <img src="assets/img/${p.imagen}" alt="${p.nombre}" class="wmp-screen__img">
+        <img src="${rutaImagen(p.imagen)}" alt="${p.nombre}" class="wmp-screen__img">
         <h3 class="wmp-screen__nombre">${p.nombre}</h3>
         <p class="wmp-screen__precio">${precioTexto(p)}</p>
     `;
